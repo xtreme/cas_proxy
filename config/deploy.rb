@@ -28,9 +28,9 @@ set :rails_env, "production"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
-default_environment["PATH"] = "/home/rails/.rvm/rubies/ruby-1.8.7-p302/bin/:$PATH"
+default_environment["PATH"] = "/var/lib/gems/1.8/bin/:$PATH"
 
-set :domain, "46.51.181.59"
+set :domain, "46.51.181.54"
 role :app, domain, :primary => true
 server domain, :web
 
