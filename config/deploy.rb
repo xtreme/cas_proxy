@@ -80,12 +80,6 @@ namespace :deploy do
   
     run "cd #{directory}; #{rake} RAILS_ENV=#{rails_env} #{migrate_env} db:migrate"
   end
-  
-  desc "Moves the config files and links the production.log file correctly"
-  task :update_config, :roles => [:app] do
-    run "cp -Rf #{shared_path}/config/* #{release_path}/config/"
-  end
-  after "deploy:update_code", "deploy:update_config"
 end
 
 desc "Watch multiple log files at the same time"
