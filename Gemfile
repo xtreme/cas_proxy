@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
 
-gem 'rails', '2.3.9'
-gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
+gem 'rails', '3.0.7'
 gem 'rubycas-client'
